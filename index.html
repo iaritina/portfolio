@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iaritina RAJAOMALALA — Portfolio</title>
+    <meta name="description" content="Projets web et automatisations réalisés par Iaritina RAJAOMALALA.">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container header-inner">
+            <a href="#hero" class="logo">Iaritina RAJAOMALALA</a>
+            <button class="nav-toggle" aria-controls="primary-navigation" aria-expanded="false" aria-label="Ouvrir le menu"><span class="hamburger"></span></button>
+            <nav id="primary-navigation" aria-label="Navigation principale">
+                <a href="#about">À propos</a><a href="#portfolio">Réalisations</a><a href="#skills">Outils</a><a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="container hero-content">
+                <p class="eyebrow">Portfolio · Développement web & automatisation</p>
+                <h1>Bonjour, je suis Iaritina.</h1>
+                <p>Je conçois et maintiens des applications web et des automatisations utiles. Voici quelques réalisations menées chez Propitech et BILP.</p>
+                <a href="#portfolio" class="text-link">Découvrir les réalisations <span aria-hidden="true">↓</span></a>
+            </div>
+        </section>
+
+        <section id="about" class="section-about">
+            <div class="container about-grid">
+                <h2>À propos</h2>
+                <div><p>Développeur web full-stack, j’interviens sur des applications existantes et sur la mise en place de nouveaux outils. J’accorde de l’importance à des solutions compréhensibles, maintenables et adaptées aux besoins concrets.</p>
+                <p class="muted">Chez Propitech et BILP (déc. 2024 – févr. 2026), j’ai travaillé sur des applications PHP, React et SPIP, des installations Docker et des automatisations métier.</p></div>
+            </div>
+        </section>
+
+        <section id="portfolio">
+            <div class="container">
+                <div class="section-heading"><p class="eyebrow">Sélection de projets</p><h2>Réalisations</h2><p class="muted">Du besoin initial aux choix techniques, puis aux résultats observés.</p></div>
+
+                <article class="case-study">
+                    <div class="case-header"><div><p class="case-number">01 · Assistant conversationnel</p><h3>Un chatbot intégré au site de l’entreprise</h3></div><a class="inline-link" href="https://www.sundiy.fr/" target="_blank" rel="noopener noreferrer">Voir le site ↗</a></div>
+                    <div class="case-grid">
+                        <div class="case-copy">
+                            <h4>Le besoin</h4><p>Donner aux visiteurs un accès rapide aux informations de l’entreprise, tout en cadrant les sujets auxquels l’assistant peut répondre.</p>
+                            <h4>Ma démarche</h4><p>J’ai orchestré les échanges avec n8n, comparé Slack et Chatwoot comme canaux de messagerie, et rassemblé les informations utiles depuis plusieurs sources, dont le site et Nextcloud. Cette préparation de la base de connaissances et des consignes de l’agent a permis de délimiter son périmètre. J’ai aussi développé un plugin sur mesure pour le CMS SPIP.</p>
+                            <p>Après comparaison, Chatwoot a été retenu : Slack répondait moins bien au besoin d’intégration au site.</p>
+                            <h4>Résultat</h4><p>Le chatbot est déployé sur <a href="https://www.sundiy.fr/" target="_blank" rel="noopener noreferrer">sundiy.fr</a>. Les mesures du projet indiquaient environ <strong>92 % de réponses correctes</strong> et un temps moyen de réponse de <strong>1,2 seconde</strong>.</p>
+                            <p class="tech-list"><span>n8n</span><span>Chatwoot</span><span>SPIP</span><span>PHP</span><span>Agent IA</span></p>
+                        </div>
+                        <figure class="media-placeholder"><div class="placeholder-frame"><span class="placeholder-icon" aria-hidden="true">▧</span><span>Emplacement visuel</span></div><figcaption>À remplacer par une capture du chatbot sur le site.</figcaption></figure>
+                    </div>
+                </article>
+
+                <article class="case-study">
+                    <div class="case-header"><div><p class="case-number">02 · Automatisation des appels</p><h3>Transcription et suivi des appels commerciaux</h3></div></div>
+                    <div class="case-grid">
+                        <div class="case-copy">
+                            <h4>Le besoin</h4><p>Rendre les appels clients consultables et faciliter leur suivi dans EspoCRM, avec un résumé exploitable par les équipes commerciales.</p>
+                            <h4>Ma démarche</h4><p>En collaboration avec l’administrateur système chargé d’Asterisk, j’ai construit des workflows n8n séparés par responsabilité. L’audio passe par l’API de transcription d’OpenAI, puis un agent IA produit un résumé. Deux canaux de traitement distinguent les prises de parole du client et du commercial. Un serveur MCP relie le traitement au back-office Thelia et à EspoCRM.</p>
+                            <p>J’ai gardé les workflows lisibles et modulaires selon le principe de responsabilité unique (SRP), afin de faciliter leur maintenance et leur évolution.</p>
+                            <h4>Résultat</h4><p>Les appels sont associés au client grâce à son numéro. Si le client existe dans Thelia, l’appel crée une opportunité ou un prospect dans EspoCRM ; sinon, un contact y est créé. Chaque fiche reçoit un résumé généré par l’agent et l’enregistrement audio reste téléchargeable. Le taux de réussite observé est d’environ <strong>85 %</strong>, avec des variations liées à la qualité sonore.</p>
+                            <p class="tech-list"><span>n8n</span><span>OpenAI API</span><span>EspoCRM</span><span>Thelia</span><span>MCP</span><span>Asterisk</span></p>
+                        </div>
+                        <figure class="media-placeholder"><div class="placeholder-frame"><span class="placeholder-icon" aria-hidden="true">▧</span><span>Emplacement visuel</span></div><figcaption>À remplacer par une capture anonymisée du workflow ou d’une fiche EspoCRM.</figcaption></figure>
+                    </div>
+                </article>
+
+                <article class="case-study case-brief">
+                    <div><p class="case-number">03 · Développement web</p><h3>Maintenance et évolution d’applications</h3><p>Maintenance d’applications PHP, React et SPIP, ajout de fonctionnalités et mise en place de tests unitaires et de tests d’interface automatisés. Les évolutions du site ont contribué à une hausse de clientèle de plus de 10 %.</p><p class="tech-list"><span>PHP</span><span>React</span><span>SPIP</span><span>Tests UI</span></p></div>
+                    <figure class="media-placeholder compact"><div class="placeholder-frame"><span class="placeholder-icon" aria-hidden="true">▧</span><span>Emplacement visuel</span></div><figcaption>Capture d’une fonctionnalité ou du site.</figcaption></figure>
+                </article>
+
+                <article class="case-brief docker-brief"><div><p class="case-number">04 · Outillage de développement</p><h3>Installation de sites avec Docker</h3><p>Automatisation de l’installation des sites pour réduire le temps de mise en place de deux heures à environ quinze minutes.</p><p class="tech-list"><span>Docker</span><span>Automatisation</span></p></div></article>
+            </div>
+        </section>
+
+        <section id="skills" class="section-tools"><div class="container tools-grid"><h2>Outils utilisés</h2><p>PHP · React · SPIP · Docker · n8n · EspoCRM · Thelia · Chatwoot · OpenAI API · MySQL</p></div></section>
+        <section id="contact"><div class="container contact-content"><p class="eyebrow">Contact</p><h2>Parlons de votre projet</h2><p>Vous souhaitez échanger sur le développement web ou l’automatisation ?</p><a class="text-link" href="mailto:votre.email@exemple.com">M’écrire par email ↗</a></div></section>
+    </main>
+    <footer><div class="container">© <span id="year"></span> Iaritina RAJAOMALALA</div></footer>
+
+    <script>
+        (function () {
+            const button = document.querySelector('.nav-toggle');
+            const nav = document.getElementById('primary-navigation');
+            button.addEventListener('click', function () {
+                const expanded = button.getAttribute('aria-expanded') === 'true';
+                button.setAttribute('aria-expanded', String(!expanded));
+                nav.classList.toggle('open', !expanded);
+            });
+            nav.querySelectorAll('a').forEach(link => link.addEventListener('click', function () {
+                nav.classList.remove('open');
+                button.setAttribute('aria-expanded', 'false');
+            }));
+            document.getElementById('year').textContent = new Date().getFullYear();
+        })();
+    </script>
+</body>
+</html>
