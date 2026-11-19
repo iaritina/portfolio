@@ -58,6 +58,9 @@ h1 { max-width: 720px; margin: 0; font-size: clamp(2.7rem, 6vw, 4.4rem); line-he
 .hero-discover { position: absolute; z-index: 1; bottom: 26px; left: 50%; display: grid; width: 52px; height: 52px; place-items: center; transform: translateX(-50%); border: 1px solid rgba(53,93,82,.2); border-radius: 50%; background: var(--accent); box-shadow: 0 8px 24px rgba(36,42,40,.14); color: #fff; text-decoration: none; animation: discover-bob 2s ease-in-out infinite; }
 .hero-discover span { margin-top: -4px; font-size: 1.8rem; line-height: 1; }
 .hero-discover:hover { background: #29483f; animation-play-state: paused; }
+.hero-tagline { position: absolute; z-index: 1; bottom: 88px; left: 50%; width: max-content; max-width: calc(100% - 36px); margin: 0; padding: 9px 18px; transform: translateX(-50%); border: 1px solid rgba(53,93,82,.2); border-radius: 14px; background: rgba(255,255,255,.78); box-shadow: 0 8px 24px rgba(36,42,40,.08); color: var(--muted); font-size: clamp(.88rem, 1.15vw, 1rem); font-weight: 600; line-height: 1.4; text-align: center; backdrop-filter: blur(8px); }
+.hero-tagline .bug-word { color: #c43d3d; font-weight: 800; }
+.hero-tagline .feature-word { color: var(--accent); font-weight: 800; }
 @keyframes discover-bob { 0%, 100% { transform: translate(-50%, 0); } 50% { transform: translate(-50%, 5px); } }
 h2 { margin-bottom: 0; font-size: 1.75rem; line-height: 1.25; letter-spacing: -.03em; font-weight: 800; }
 .muted, .case-copy > p, .case-brief p:not(.case-number) { color: var(--muted); }
@@ -127,7 +130,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
     nav.open { display: flex; }
     .language-switch { align-self: flex-start; margin: 3px 0 0; padding: 10px 0 0; border-left: 0; border-top: 1px solid var(--line); }
     section { padding: 58px 0; }
-    #hero { min-height: 100svh; padding: 88px 0 94px; }
+    #hero { min-height: 100svh; padding: 88px 0 152px; }
     .hero-layout { grid-template-columns: 1fr; gap: 24px; }
     .hero-content { gap: 15px; }
     .architecture-visual { width: 100%; max-width: 500px; margin: 0 auto; }
