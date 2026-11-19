@@ -28,7 +28,7 @@ nav a:hover, .inline-link:hover, .text-link:hover { color: var(--accent); }
 .hamburger::before, .hamburger::after { content: ''; position: absolute; left: 0; }
 .hamburger::before { top: -7px; } .hamburger::after { top: 7px; }
 section { padding: 76px 0; }
-#hero { position: relative; overflow: hidden; min-height: 100svh; display: flex; align-items: center; padding: 112px 0 64px; background-color: var(--paper); background-image: linear-gradient(rgba(53,93,82,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(53,93,82,.035) 1px, transparent 1px); background-size: 32px 32px; }
+#hero { position: relative; overflow: hidden; min-height: 100svh; display: flex; align-items: center; padding: 112px 0 104px; background-color: var(--paper); background-image: linear-gradient(rgba(53,93,82,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(53,93,82,.035) 1px, transparent 1px); background-size: 32px 32px; }
 .hero-layout { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(340px, .8fr); align-items: center; gap: clamp(36px, 5vw, 68px); }
 .hero-content { max-width: 680px; display: flex; flex-direction: column; align-items: flex-start; gap: 18px; text-align: left; }
 .architecture-visual { margin: 0; padding: 12px 0; }
@@ -55,7 +55,10 @@ h1 { max-width: 720px; margin: 0; font-size: clamp(2.7rem, 6vw, 4.4rem); line-he
 .social-links svg { width: 33px; height: 33px; fill: currentColor; }
 .hero-content > p:not(.eyebrow) { max-width: 590px; margin: 0; color: var(--muted); font-size: 1.08rem; line-height: 1.75; }
 .text-link, .inline-link { color: var(--accent); font-weight: 700; text-decoration: none; }
-.text-link span { margin-left: 5px; }
+.hero-discover { position: absolute; z-index: 1; bottom: 26px; left: 50%; display: grid; width: 52px; height: 52px; place-items: center; transform: translateX(-50%); border: 1px solid rgba(53,93,82,.2); border-radius: 50%; background: var(--accent); box-shadow: 0 8px 24px rgba(36,42,40,.14); color: #fff; text-decoration: none; animation: discover-bob 2s ease-in-out infinite; }
+.hero-discover span { margin-top: -4px; font-size: 1.8rem; line-height: 1; }
+.hero-discover:hover { background: #29483f; animation-play-state: paused; }
+@keyframes discover-bob { 0%, 100% { transform: translate(-50%, 0); } 50% { transform: translate(-50%, 5px); } }
 h2 { margin-bottom: 0; font-size: 1.75rem; line-height: 1.25; letter-spacing: -.03em; font-weight: 800; }
 .muted, .case-copy > p, .case-brief p:not(.case-number) { color: var(--muted); }
 #portfolio { padding-top: 88px; }
@@ -124,9 +127,11 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
     nav.open { display: flex; }
     .language-switch { align-self: flex-start; margin: 3px 0 0; padding: 10px 0 0; border-left: 0; border-top: 1px solid var(--line); }
     section { padding: 58px 0; }
-    #hero { min-height: 100svh; padding: 96px 0 54px; }
+    #hero { min-height: 100svh; padding: 88px 0 94px; }
     .hero-layout { grid-template-columns: 1fr; gap: 24px; }
-    .architecture-visual { max-width: 500px; margin: 0 auto; }
+    .hero-content { gap: 15px; }
+    .architecture-visual { width: 100%; max-width: 500px; margin: 0 auto; }
+    .architecture-diagram { width: 100%; max-width: 500px; margin: 0 auto; }
     .case-grid, .case-brief { grid-template-columns: minmax(0, 1fr); gap: 22px; }
     .case-header { align-items: start; flex-direction: column; gap: 12px; }
     .placeholder-frame { min-height: 210px; }
@@ -137,5 +142,5 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
 }
 .motion-ready .reveal-on-scroll { opacity: 0; transform: translateY(14px); transition: opacity .55s ease, transform .55s ease; }
 .motion-ready .reveal-on-scroll.is-visible { opacity: 1; transform: translateY(0); }
-@media (max-width: 420px) { .architecture-diagram { width: 112%; margin-left: -6%; } }
+@media (max-width: 420px) { .architecture-diagram { width: 100%; margin-left: 0; } }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition-duration: .01ms !important; animation: none !important; } }
